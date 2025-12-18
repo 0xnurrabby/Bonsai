@@ -533,7 +533,7 @@ function computeHealth(st: LocalState) {
 }
 
 function canWater(st: LocalState) {
-  return hoursSince(st.lastWateredAt) >= 24;
+  return hoursSince(st.lastWateredAt) >= 1;
 }
 
 function computeMissedStreak(st: LocalState) {
