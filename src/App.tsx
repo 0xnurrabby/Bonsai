@@ -894,7 +894,7 @@ export default function App() {
     ? "Plant a seed to generate your soul-tree."
     : withered
     ? "Withered — revive within the ink."
-    : "Alive — water daily to grow.";
+    : "Alive. water daily to grow🌲.";
 
   return (
     <div className="wrap">
