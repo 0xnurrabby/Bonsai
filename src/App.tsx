@@ -10,7 +10,7 @@ import { Attribution } from "https://esm.sh/ox/erc8021";
  */
 
 // ===== Builder code attribution (REQUIRED) =====
-const BUILDER_CODE = "BASE_BONSAI_NURRABBY_V1";
+const BUILDER_CODE = "bc_z79ttk8w";
 const dataSuffix = Attribution.toDataSuffix({ codes: [BUILDER_CODE] });
 
 // ===== Tip recipient (REQUIRED) =====
