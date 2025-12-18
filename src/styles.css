@@ -1,0 +1,227 @@
+/* Base Bonsai — ink wash on textured paper */
+:root{
+  --paper:#f5f0e8;
+  --ink:#141414;
+  --muted:#4a4a4a;
+  --card: rgba(255,255,255,.55);
+  --shadow: 0 18px 50px rgba(0,0,0,.10);
+  --radius: 20px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  background: radial-gradient(1200px 900px at 20% 10%, rgba(0,0,0,.04), transparent 60%),
+              radial-gradient(900px 700px at 90% 30%, rgba(0,0,0,.035), transparent 55%),
+              linear-gradient(0deg, rgba(0,0,0,.03), rgba(0,0,0,.01)),
+              var(--paper);
+  color:var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+a{ color:inherit; }
+
+.wrap{
+  min-height:100%;
+  padding: 14px 14px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.brand{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.brand img{ width:34px; height:34px; border-radius:12px; }
+.brand h1{
+  font-size:16px;
+  line-height:1.05;
+  margin:0;
+  letter-spacing:.2px;
+}
+.brand p{
+  margin:2px 0 0;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.btn{
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.60);
+  color: var(--ink);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing:.2px;
+  cursor:pointer;
+  transition: transform .08s ease, background .12s ease;
+}
+.btn:active{ transform: scale(.98); }
+.btn.primary{
+  background: rgba(20,20,20,.92);
+  color: var(--paper);
+  border-color: rgba(0,0,0,.25);
+}
+.btn.ghost{
+  background: transparent;
+}
+.btn:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+}
+
+.card{
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,.10);
+  backdrop-filter: blur(10px);
+}
+
+.canvasCard{
+  padding: 10px;
+}
+
+.canvasShell{
+  position:relative;
+  border-radius: 18px;
+  overflow:hidden;
+  background: rgba(255,255,255,.35);
+  border: 1px solid rgba(0,0,0,.10);
+  min-height: 520px;
+}
+
+canvas{ width:100%; height: 520px; display:block; }
+
+/* Controls are kept below the canvas (not over it) so the tree stays visible. */
+.dock{
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.10);
+  backdrop-filter: blur(10px);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.dockRow{
+  display:flex;
+  gap:10px;
+  justify-content:space-between;
+}
+
+.pill{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.55);
+  border:1px solid rgba(0,0,0,.10);
+  font-size:12px;
+  color:var(--muted);
+}
+
+.pill strong{ color:var(--ink); font-weight:700; }
+
+.toast{
+  position:fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(20,20,20,.92);
+  color: var(--paper);
+  font-size: 13px;
+  box-shadow: var(--shadow);
+  max-width: calc(100% - 28px);
+  text-align:center;
+  z-index:50;
+}
+
+/* Bottom-sheet modal */
+.sheetBack{
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(4px);
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  z-index:60;
+}
+
+.sheet{
+  width:100%;
+  max-width: 520px;
+  border-radius: 22px 22px 0 0;
+  background: rgba(245,240,232,.98);
+  border:1px solid rgba(0,0,0,.12);
+  box-shadow: var(--shadow);
+  padding: 12px 14px 18px;
+}
+
+.sheetHandle{
+  width: 56px;
+  height: 6px;
+  border-radius:999px;
+  background: rgba(0,0,0,.14);
+  margin: 6px auto 12px;
+}
+
+.sheetHeader{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+  padding: 0 2px 10px;
+}
+.sheetHeader h2{ margin:0; font-size:16px; }
+.sheetHeader p{ margin:4px 0 0; font-size:12px; color:var(--muted); }
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+  margin: 10px 0 10px;
+}
+
+.input{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.70);
+  font-size: 14px;
+  outline:none;
+}
+.small{
+  font-size:12px;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
