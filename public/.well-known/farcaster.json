@@ -1,0 +1,35 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Base Bonsai",
+    "subtitle": "The On-Chain Living Art",
+    "description": "Grow a generative ink-wash bonsai that evolves with your wallet activity. Water daily on Base to keep it alive; graft flowers onto friends\u2019 trees.",
+    "iconUrl": "https://nurrabby.com/assets/icon.png",
+    "splashImageUrl": "https://nurrabby.com/assets/splash.png",
+    "splashBackgroundColor": "#f5f0e8",
+    "homeUrl": "https://nurrabby.com/",
+    "webhookUrl": "https://nurrabby.com/api/webhook",
+    "primaryCategory": "games",
+    "tags": [
+      "bonsai",
+      "generative-art",
+      "base",
+      "onchain",
+      "farcaster",
+      "zen"
+    ],
+    "heroImageUrl": "https://nurrabby.com/assets/embed-3x2.png",
+    "ogTitle": "Base Bonsai",
+    "ogDescription": "Plant, water, and grow an on-chain ink bonsai powered by your wallet activity.",
+    "ogImageUrl": "https://nurrabby.com/assets/embed-3x2.png",
+    "requiredCapabilities": [
+      "wallet",
+      "ethereum"
+    ]
+  }
+}
