@@ -258,7 +258,8 @@ function renderBonsai(
     depth: number
   ) {
     const t = depth / maxDepth;
-    const jitter = (rng() - 0.5) * 0.25;
+    const jitter = (rng() - 0.5) * 0.06;
+
     const a = ang + jitter;
     const ex = x + Math.cos(a) * len + bend * t * 0.18;
     const ey = y - Math.sin(a) * len;
@@ -715,7 +716,8 @@ export default function App() {
     const growth = planted ? Math.max(1, local.growth) : 0;
 
     function frame(ts: number) {
-      const breeze = 0.5 + Math.sin(ts / 1600) * 0.5;
+      const breeze = 0.5 + Math.sin(ts / 3200) * 0.18;
+
       renderBonsai(ctx, c.getBoundingClientRect().width, c.getBoundingClientRect().height, {
         seed,
         richness,
