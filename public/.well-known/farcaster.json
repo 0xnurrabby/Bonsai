@@ -1,19 +1,19 @@
 {
   "accountAssociation": {
-    "header": "",
-    "payload": "",
-    "signature": ""
+    "header": "eyJmaWQiOjE0MTU3NzUsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhDYTZjMERBNDRFMjBCMkYwMUY5YTYwYjE0RjkzNTE3NUQ1NkU5MWNBIn0",
+    "payload": "eyJkb21haW4iOiJib25zYWktYXNoeS52ZXJjZWwuYXBwIn0",
+    "signature": "m/ypOPrDx+YXRwQ+EQvCSm8UTAw4QOFSy3m+AAe//fopuT1HM9XqoSf5TYFjFPyl8hem5uASGCrJErx3ZTNR8Rs="
   },
   "miniapp": {
     "version": "1",
     "name": "Base Bonsai",
     "subtitle": "The On-Chain Living Art",
     "description": "Grow a generative ink-wash bonsai that evolves with your wallet activity. Water daily on Base to keep it alive; graft flowers onto friends\u2019 trees.",
-    "iconUrl": "https://nurrabby.com/assets/icon.png",
-    "splashImageUrl": "https://nurrabby.com/assets/splash.png",
+    "iconUrl": "https://bonsai-ashy.vercel.app/assets/icon.png",
+    "splashImageUrl": "https://bonsai-ashy.vercel.app/assets/splash.png",
     "splashBackgroundColor": "#f5f0e8",
-    "homeUrl": "https://nurrabby.com/",
-    "webhookUrl": "https://nurrabby.com/api/webhook",
+    "homeUrl": "https://bonsai-ashy.vercel.app/",
+    "webhookUrl": "https://bonsai-ashy.vercel.app/api/webhook",
     "primaryCategory": "games",
     "tags": [
       "bonsai",
@@ -23,10 +23,10 @@
       "farcaster",
       "zen"
     ],
-    "heroImageUrl": "https://nurrabby.com/assets/embed-3x2.png",
+    "heroImageUrl": "https://bonsai-ashy.vercel.app/assets/embed-3x2.png",
     "ogTitle": "Base Bonsai",
     "ogDescription": "Plant, water, and grow an on-chain ink bonsai powered by your wallet activity.",
-    "ogImageUrl": "https://nurrabby.com/assets/embed-3x2.png",
+    "ogImageUrl": "https://bonsai-ashy.vercel.app/assets/embed-3x2.png",
     "requiredCapabilities": [
       "wallet",
       "ethereum"
