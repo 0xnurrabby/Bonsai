@@ -952,7 +952,7 @@ export default function App() {
 
           {planted && (
             <p className="small">
-              Water every 24h. Miss 3 days and the tree withers (revive required). Balance affects trunk thickness; activity affects leafiness.
+              Water every 1h. Miss 3 days and the tree withers (revive required). Balance affects trunk thickness; activity affects leafiness.
             </p>
           )}
         </div>
